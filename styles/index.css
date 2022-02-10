@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --Pale-blue: rgb(224, 232, 255);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: rgb(245, 247, 255);
+  --Desaturated-blue: rgb(114, 128, 167);
+  --Dark-blue: rgb(31, 47, 86);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: 200vh;
+}
+
+.main_component {
+  width: 88%;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.main_component .hero_img {
+  width: 100%;
+}
+
+.main_component .main_content {
+  padding: 30px;
+  text-align: center;
+}
+
+.main_component .main_content .main_title {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.main_component .main_content .main_paragraph {
+  color: var(--Desaturated-blue);
+  margin-bottom: 30px;
+}
+
+.main_component .main_content .plan {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: var(--Very-pale-blue);
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.main_component .main_content .plan_icon {
+  margin-right: 15px;
+}
+
+.main_component .main_content .plan_details {
+  margin-right: 10px;
+}
+
+.main_component .main_content .plan_details-title {
+  font-weight: 700;
+}
+
+.main_component .main_content .plan_details-price {
+  color: var(--Desaturated-blue);
+}
+
+.main_component .main_content .plan_change {
+  margin-left: auto;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.main_component .main_content .plan_change:hover {
+  opacity: 0.7;
+}
+
+.main_component .main_content .decision_btn {
+  border: none;
+  font-weight: 700;
+  font-family: "Red Hat Display", sans-serif;
+  cursor: pointer;
+}
+
+.main_component .main_content .decision_btn-accept {
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  background-color: var(--Bright-blue);
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 10px 15px 0px var(--Desaturated-blue);
+          box-shadow: 0px 10px 15px 0px var(--Desaturated-blue);
+}
+
+.main_component .main_content .decision_btn-accept:hover {
+  opacity: 0.7;
+}
+
+.main_component .main_content .decision_btn-cancel {
+  background: none;
+  color: var(--Desaturated-blue);
+  width: auto;
+  padding: 0;
+}
+
+.main_component .main_content .decision_btn-cancel:hover {
+  color: black;
+}
+
+@media (min-width: 500px) {
+  .main_component {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-color: var(--Pale-blue);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .main_component {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main_component {
+    max-width: 33%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .main_component {
+    max-width: 23%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

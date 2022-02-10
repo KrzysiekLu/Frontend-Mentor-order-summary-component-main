@@ -1,0 +1,145 @@
+:root {
+  // ### Primary
+
+  --Pale-blue: rgb(224, 232, 255);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  // ### Neutral
+
+  --Very-pale-blue: rgb(245, 247, 255);
+  --Desaturated-blue: rgb(114, 128, 167);
+  --Dark-blue: rgb(31, 47, 86);
+}
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+// font-family: 'Red Hat Display', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/pattern-background-mobile.svg);
+  // background-color: var(--Pale-blue);
+  background-size: 200vh;
+}
+
+.main_component {
+  width: 88%;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  font-family: "Red Hat Display", sans-serif;
+  .hero_img {
+    width: 100%;
+  }
+  .main_content {
+    padding: 30px;
+    text-align: center;
+    .main_title {
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+    .main_paragraph {
+      color: var(--Desaturated-blue);
+      margin-bottom: 30px;
+    }
+    .plan {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      background-color: var(--Very-pale-blue);
+      border-radius: 20px;
+      padding: 15px;
+      margin-bottom: 30px;
+      &_icon {
+        margin-right: 15px;
+      }
+      &_details {
+        margin-right: 10px;
+        &-title {
+          font-weight: 700;
+        }
+        &-price {
+          color: var(--Desaturated-blue);
+        }
+      }
+      &_change {
+        margin-left: auto;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 14px;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .decision {
+      &_btn {
+        border: none;
+        font-weight: 700;
+        font-family: "Red Hat Display", sans-serif;
+        cursor: pointer;
+      }
+      &_btn-accept {
+        border-radius: 10px;
+        width: 100%;
+        padding: 15px;
+        color: white;
+        background-color: var(--Bright-blue);
+        margin-bottom: 20px;
+        box-shadow: 0px 10px 15px 0px var(--Desaturated-blue);
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      &_btn-cancel {
+        background: none;
+        color: var(--Desaturated-blue);
+        width: auto;
+        padding: 0;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .main_component {
+    max-width: 70%;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-color: var(--Pale-blue);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .main_component {
+    max-width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .main_component {
+    max-width: 33%;
+  }
+}
+@media (min-width: 1300px) {
+  .main_component {
+    max-width: 23%;
+  }
+}
